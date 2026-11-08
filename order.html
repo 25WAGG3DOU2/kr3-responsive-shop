@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заявка — Магазин периферии</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">GamingLARP</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html">Главная</a></li>
+            <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+            <li><a class="site-nav__link" href="product.html">Товар</a></li>
+            <li><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
+            <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">
+          <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <h1>Оформление заявки</h1>
+      <form class="order-form" action="#" method="post">
+        <div class="form-field">
+          <label for="name">Имя *</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-field">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-field">
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+        <div class="form-field">
+          <label for="topic">Тема заявки</label>
+          <select id="topic" name="topic">
+            <option value="product">Заказ товара</option>
+            <option value="consultation">Консультация</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="comment">Комментарий</label>
+          <textarea id="comment" name="comment" rows="4"></textarea>
+        </div>
+        <div class="form-field" style="display: flex; gap: 8px; align-items: center;">
+          <input type="checkbox" id="agree" required style="width: auto;" />
+          <label for="agree">Я согласен на обработку данных *</label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="button">Отправить заявку</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    </footer>
+  </body>
+</html>

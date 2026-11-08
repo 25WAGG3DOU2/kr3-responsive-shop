@@ -1,0 +1,149 @@
+
+
+body {
+  overflow-x: hidden; 
+}
+
+.section {
+  padding-inline: 16px;
+  padding-block: 24px;
+}
+
+
+.site-header__inner {
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-block: 16px;
+}
+
+.site-nav__list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.site-nav__link {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+/* Сетки и каталог */
+.products-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.catalog-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.catalog-filters {
+  position: static;
+  width: 100%;
+}
+
+/* Формы */
+.order-form {
+  grid-template-columns: 1fr;
+}
+
+.form-actions {
+  flex-direction: column-reverse;
+}
+
+.form-actions button {
+  width: 100%;
+}
+
+/* Hero на мобильных */
+.hero {
+  background-attachment: scroll;
+  min-height: 40vh;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+/* =========================================================
+   Медиазапросы (Mobile First)
+   ========================================================= */
+
+/* Планшеты (от 640px) */
+@media (min-width: 640px) {
+  .section {
+    padding-inline: 24px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-actions {
+    flex-direction: row;
+  }
+
+  .form-actions button {
+    width: auto;
+  }
+}
+
+/* Планшеты горизонтально (от 768px) */
+@media (min-width: 768px) {
+  .site-header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-nav__list {
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+
+  .order-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-field--wide {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Десктоп (от 1024px) */
+@media (min-width: 1024px) {
+  .section {
+    padding-inline: 32px;
+    padding-block: 48px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .catalog-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .catalog-filters {
+    position: sticky;
+    top: 90px;
+  }
+}
+
+/* Широкий десктоп (от 1280px) */
+@media (min-width: 1280px) {
+  .products-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

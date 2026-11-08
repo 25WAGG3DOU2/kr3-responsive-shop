@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог — Магазин периферии</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">GamingLARP</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html">Главная</a></li>
+            <li><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+            <li><a class="site-nav__link" href="product.html">Товар</a></li>
+            <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+            <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">
+          <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Каталог</span>
+      </nav>
+
+      <section class="catalog-layout">
+        <aside class="catalog-filters">
+          <h2>Фильтры</h2>
+          <form class="filters-form" action="#" method="get">
+            <fieldset>
+              <legend>Категория</legend>
+              <label><input type="checkbox" name="category" value="all" /> Все товары</label>
+              <label><input type="checkbox" name="category" value="mouse" /> Мыши</label>
+              <label><input type="checkbox" name="category" value="keyboard" /> Клавиатуры</label>
+            </fieldset>
+            <button class="button" type="submit">Применить</button>
+          </form>
+        </aside>
+
+        <section class="catalog-products">
+          <h2>Список товаров</h2>
+          <div class="products-grid">
+            
+            <!-- Карточка 1 -->
+            <article class="product-card" data-product-id="keyboard-asus-rog">
+              <img src="images/keyboard-asus.jpg" alt="Клавиатура ASUS ROG" class="product-card__image" />
+              <h3 class="product-card__title">ASUS ROG Strix Scope II RX</h3>
+              <div class="table-wrapper">
+                <table class="product-table">
+                  <caption class="sr-only">Характеристики клавиатуры ASUS</caption>
+                  <tbody>
+                    <tr><th>Тип</th><td>Оптико-механическая</td></tr>
+                    <tr><th>Подсветка</th><td>RGB Aura Sync</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="product-card__price">18 990 ₽</p>
+              <a href="order.html" class="button">Заказать</a>
+            </article>
+
+            <!-- Карточка 2 -->
+            <article class="product-card" data-product-id="mouse-razer-da">
+              <img src="images/mouse-razer.jpg" alt="Мышь Razer DeathAdder" class="product-card__image" />
+              <h3 class="product-card__title">Razer DeathAdder V4 Pro</h3>
+              <div class="table-wrapper">
+                <table class="product-table">
+                  <caption class="sr-only">Характеристики мыши Razer</caption>
+                  <tbody>
+                    <tr><th>Сенсор</th><td>45 000 DPI</td></tr>
+                    <tr><th>Вес</th><td>65 г</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="product-card__price">12 990 ₽</p>
+              <a href="order.html" class="button">Заказать</a>
+            </article>
+
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    </footer>
+  </body>
+</html>

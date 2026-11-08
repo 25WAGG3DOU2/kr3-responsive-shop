@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товар — Магазин периферии</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">GamingLARP</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html">Главная</a></li>
+            <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+            <li><a class="site-nav__link site-nav__link--active" href="product.html" aria-current="page">Товар</a></li>
+            <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+            <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">
+          <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+        <span class="breadcrumbs__current">Razer DeathAdder</span>
+      </nav>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 24px;">
+        <div>
+          <img src="images/mouse-razer.jpg" alt="Мышь Razer DeathAdder V4 Pro" style="border-radius: 14px; width: 100%;" />
+        </div>
+        <div>
+          <h1>Razer DeathAdder V4 Pro</h1>
+          <p style="font-size: 1.5rem; font-weight: bold; color: var(--color-primary); margin-bottom: 24px;">12 990 ₽</p>
+          <p>Легендарная эргономика, сенсор 45 000 DPI и 65 г веса.</p>
+          
+          <h2 style="margin-top: 32px;">Характеристики</h2>
+          <div class="table-wrapper">
+            <table class="product-table">
+              <caption class="sr-only">Характеристики товара</caption>
+              <tbody>
+                <tr><th>Тип</th><td>Беспроводная</td></tr>
+                <tr><th>Сенсор</th><td>Focus Pro 45K DPI</td></tr>
+                <tr><th>Вес</th><td>65 г</td></tr>
+                <tr><th>Автономность</th><td>до 150 часов</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <a href="order.html" class="button" style="margin-top: 24px; width: 100%;">Оформить заявку</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    </footer>
+  </body>
+</html>
