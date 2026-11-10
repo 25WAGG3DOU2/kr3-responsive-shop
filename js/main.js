@@ -1,4 +1,4 @@
-/* ---------- Тёмная тема ---------- */
+
 const THEME_KEY = "shop:theme";
 const applyTheme = (theme) => {
   document.documentElement.dataset.theme = theme;
@@ -12,7 +12,7 @@ const applyTheme = (theme) => {
 
 const initThemeToggle = () => {
   const saved = localStorage.getItem(THEME_KEY);
-  // Принудительно темная, если нет сохраненного выбора
+
   applyTheme(saved === "light" || saved === "dark" ? saved : "dark");
 
   document.querySelectorAll("[data-theme-toggle]").forEach((btn) => {
@@ -26,7 +26,6 @@ const initThemeToggle = () => {
 };
 initThemeToggle();
 
-/* ---------- Модальное окно ---------- */
 const orderDialog = document.getElementById("order-dialog");
 const orderButtons = document.querySelectorAll("[data-product]");
 const closeDialogButton = document.getElementById("close-order-dialog");
@@ -45,7 +44,7 @@ if (closeDialogButton && orderDialog) {
   closeDialogButton.addEventListener("click", () => orderDialog.close());
 }
 
-/* ---------- Валидация формы ---------- */
+
 const orderForm = document.getElementById("order-form");
 const successMessage = document.getElementById("success-message");
 
